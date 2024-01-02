@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: TestCases
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.091 s <<< FAILURE! - in TestCases
+testPaymentPresentation  Time elapsed: 0.006 s  <<< ERROR!
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'Gpay.controller.PaymentPresentation' available
+	at TestCases.testPaymentPresentation(TestCases.java:57)
+
+testPaymentService  Time elapsed: 0 s  <<< ERROR!
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'Gpay.service.PaymentService' available
+	at TestCases.testPaymentService(TestCases.java:73)
+
+testAccountDetailsDAO  Time elapsed: 0.001 s  <<< ERROR!
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'Gpay.dao.AccountDetailsDAO' available
+	at TestCases.testAccountDetailsDAO(TestCases.java:109)
+
+testProductDetailsDAO  Time elapsed: 0 s  <<< ERROR!
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'Gpay.dao.ProductDetailsDAO' available
+	at TestCases.testProductDetailsDAO(TestCases.java:93)
+
+testAccountAndProductBean  Time elapsed: 0.001 s  <<< ERROR!
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'Gpay.entities.Account' available
+	at TestCases.testAccountAndProductBean(TestCases.java:125)
+
+testshowPayment_whenInsufficientQuantitiesOfProduct_thenThrowPaymentException  Time elapsed: 0.003 s
+testshowPayment_whenSufficientBalanceForBuyingProduct_thenReturnTotalPaymentAmount  Time elapsed: 0 s  <<< ERROR!
+java.lang.NoSuchMethodException: Gpay.controller.PaymentPresentation.showPayment(int)
+	at TestCases.testshowPayment_whenSufficientBalanceForBuyingProduct_thenReturnTotalPaymentAmount(TestCases.java:142)
+
+testshowPayment_whenInsufficientBalanceForBuyingProduct_thenThrowPaymentException  Time elapsed: 0.001 s
+buildScore  Time elapsed: 0.003 s

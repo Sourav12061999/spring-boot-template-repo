@@ -1,0 +1,88 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.masai:Gpay1 >---------------------------
+[INFO] Building Gpay 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact org.hibernate:hibernate-core:jar:6.1.6.Final has been relocated to org.hibernate.orm:hibernate-core:jar:6.1.6.Final
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.31 has been relocated to com.mysql:mysql-connector-j:jar:8.0.31: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Gpay1 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ Gpay1 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Gpay1 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/souravdas/Desktop/spring-Gpay-1/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ Gpay1 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ Gpay1 ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running TestCases
+[MARKS] marks is 4.0
+[ERROR] Tests run: 9, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.091 s <<< FAILURE! - in TestCases
+[ERROR] testPaymentPresentation  Time elapsed: 0.006 s  <<< ERROR!
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'Gpay.controller.PaymentPresentation' available
+	at TestCases.testPaymentPresentation(TestCases.java:57)
+
+[ERROR] testPaymentService  Time elapsed: 0 s  <<< ERROR!
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'Gpay.service.PaymentService' available
+	at TestCases.testPaymentService(TestCases.java:73)
+
+[ERROR] testAccountDetailsDAO  Time elapsed: 0.001 s  <<< ERROR!
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'Gpay.dao.AccountDetailsDAO' available
+	at TestCases.testAccountDetailsDAO(TestCases.java:109)
+
+[ERROR] testProductDetailsDAO  Time elapsed: 0 s  <<< ERROR!
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'Gpay.dao.ProductDetailsDAO' available
+	at TestCases.testProductDetailsDAO(TestCases.java:93)
+
+[ERROR] testAccountAndProductBean  Time elapsed: 0.001 s  <<< ERROR!
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'Gpay.entities.Account' available
+	at TestCases.testAccountAndProductBean(TestCases.java:125)
+
+[ERROR] testshowPayment_whenInsufficientQuantitiesOfProduct_thenThrowPaymentException  Time elapsed: 0.003 s
+[ERROR] testshowPayment_whenSufficientBalanceForBuyingProduct_thenReturnTotalPaymentAmount  Time elapsed: 0 s  <<< ERROR!
+java.lang.NoSuchMethodException: Gpay.controller.PaymentPresentation.showPayment(int)
+	at TestCases.testshowPayment_whenSufficientBalanceForBuyingProduct_thenReturnTotalPaymentAmount(TestCases.java:142)
+
+[ERROR] testshowPayment_whenInsufficientBalanceForBuyingProduct_thenThrowPaymentException  Time elapsed: 0.001 s
+[ERROR] buildScore  Time elapsed: 0.003 s
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestCases.testAccountAndProductBean:125 » NoSuchBeanDefinition No qualifying b...
+[ERROR]   TestCases.testAccountDetailsDAO:109 » NoSuchBeanDefinition No qualifying bean ...
+[ERROR]   TestCases.testPaymentPresentation:57 » NoSuchBeanDefinition No qualifying bean...
+[ERROR]   TestCases.testPaymentService:73 » NoSuchBeanDefinition No qualifying bean of t...
+[ERROR]   TestCases.testProductDetailsDAO:93 » NoSuchBeanDefinition No qualifying bean o...
+[ERROR]   TestCases.testshowPayment_whenSufficientBalanceForBuyingProduct_thenReturnTotalPaymentAmount:142 » NoSuchMethod
+[INFO] 
+[ERROR] Tests run: 9, Failures: 0, Errors: 6, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.320 s
+[INFO] Finished at: 2024-01-02T15:21:50+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project Gpay1: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/souravdas/Desktop/spring-Gpay-1/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
